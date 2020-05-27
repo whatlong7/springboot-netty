@@ -11,7 +11,7 @@
     <groupId>com.picooc.wifi</groupId>
     <artifactId>wifi-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-netty</name>
+    <name>wifi-service</name>
     <description>springboot集成netty</description>
     <packaging>pom</packaging>
 
