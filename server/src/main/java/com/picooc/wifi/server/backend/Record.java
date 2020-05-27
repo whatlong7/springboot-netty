@@ -1,4 +1,4 @@
-package com.picooc.wifiservice.backend;
+package com.picooc.wifi.server.backend;
 
 /**
  * Created by Shawn Tien on 3/11/16.
@@ -80,6 +80,16 @@ public class Record {
     public void setDomain(String domain) {
         this.domain = domain;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "mac='" + mac + '\'' +
+                ", time=" + time +
+                ", weight=" + weight +
+                ", resistance=" + resistance +
+                ", is_normal=" + is_normal +
+                ", domain='" + domain + '\'' +
+                '}';
+    }
 }

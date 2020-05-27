@@ -1,8 +1,8 @@
-package com.picooc.wifiservice.backend.type;
+package com.picooc.wifi.server.type;
 
-import com.picooc.wifiservice.backend.Record;
-import com.picooc.wifiservice.backend.ScaleDomain;
-import com.picooc.wifiservice.backend.Utils;
+import com.picooc.wifi.server.backend.Record;
+import com.picooc.wifi.server.backend.ScaleDomain;
+import com.picooc.wifi.server.backend.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

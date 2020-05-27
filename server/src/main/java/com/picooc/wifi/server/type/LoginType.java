@@ -1,12 +1,8 @@
-package com.picooc.wifiservice.backend.type;
+package com.picooc.wifi.server.type;
 
-import com.picooc.wifiservice.backend.Utils;
-import com.picooc.wifiservice.domain.WifiLatinRouterMacPairedDataDO;
-import com.picooc.wifiservice.dto.WifiLatinRouterMacPairedDataDTO;
-import com.picooc.wifiservice.service.IWifiLatinRouterMacPairedDataService;
+import com.picooc.wifi.server.backend.Utils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.web.context.ContextLoader;
 
 import javax.annotation.Resource;
 import java.sql.Timestamp;
@@ -20,10 +16,10 @@ public class LoginType extends BaseType {
     private final static String replyType = "A8";
     protected final Log logger = LogFactory.getLog(this.getClass());
 
-    @Resource
-    private IWifiLatinRouterMacPairedDataService wifiLatinRouterMacPairedDataService =
-        (IWifiLatinRouterMacPairedDataService) ContextLoader.getCurrentWebApplicationContext()
-            .getBean("wifiLatinRouterMacPairedDataService");
+//    @Resource
+//    private IWifiLatinRouterMacPairedDataService wifiLatinRouterMacPairedDataService =
+//        (IWifiLatinRouterMacPairedDataService) ContextLoader.getCurrentWebApplicationContext()
+//            .getBean("wifiLatinRouterMacPairedDataService");
 
     @Override
     public boolean process() {
@@ -39,29 +35,29 @@ public class LoginType extends BaseType {
         }
 
         try {
-            WifiLatinRouterMacPairedDataDO data = new WifiLatinRouterMacPairedDataDO();
-            data.setLatinMac(macAddress);
-            data.setRouterMac(routerMacAddress);
-            data.setBindTime((int) (System.currentTimeMillis() / 1000L));
-            data.setTime(new Timestamp(new Date().getTime()));
-            data.setLastUseRouterMac(routerMacAddress);
+//            WifiLatinRouterMacPairedDataDO data = new WifiLatinRouterMacPairedDataDO();
+//            data.setLatinMac(macAddress);
+//            data.setRouterMac(routerMacAddress);
+//            data.setBindTime((int) (System.currentTimeMillis() / 1000L));
+//            data.setTime(new Timestamp(new Date().getTime()));
+//            data.setLastUseRouterMac(routerMacAddress);
+//            /*
+//             * Check record (latinMac - routerMac pair) whether exist.
+//             * If exists, update by all record with this latinMac.
+//             * if NOT exists, just insert a new one.
+//             */
+//            WifiLatinRouterMacPairedDataDO query = wifiLatinRouterMacPairedDataService
+//                .getByLatinMacAndRouterMac(data.getLatinMac(), data.getRouterMac());
+//            if (query != null) {
+//                WifiLatinRouterMacPairedDataDTO dataDTO = new WifiLatinRouterMacPairedDataDTO();
+//                dataDTO.setLatinMac(macAddress);
+//                dataDTO.setRouterMac(routerMacAddress);
+//                wifiLatinRouterMacPairedDataService.update(dataDTO, data);
+//            } else {
+//                wifiLatinRouterMacPairedDataService.insert(data);
+//            }
 
 
-            /*
-             * Check record (latinMac - routerMac pair) whether exist.
-             * If exists, update by all record with this latinMac.
-             * if NOT exists, just insert a new one.
-             */
-            WifiLatinRouterMacPairedDataDO query = wifiLatinRouterMacPairedDataService
-                .getByLatinMacAndRouterMac(data.getLatinMac(), data.getRouterMac());
-            if (query != null) {
-                WifiLatinRouterMacPairedDataDTO dataDTO = new WifiLatinRouterMacPairedDataDTO();
-                dataDTO.setLatinMac(macAddress);
-                dataDTO.setRouterMac(routerMacAddress);
-                wifiLatinRouterMacPairedDataService.update(dataDTO, data);
-            } else {
-                wifiLatinRouterMacPairedDataService.insert(data);
-            }
         } catch (Exception e) {
             logger.error("Insert new login data to DB failed.");
             logger.error(e.getMessage());

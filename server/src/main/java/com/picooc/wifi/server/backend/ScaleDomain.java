@@ -1,6 +1,6 @@
-package com.picooc.wifiservice.backend;
+package com.picooc.wifi.server.backend;
 
-import com.picooc.wifiservice.common.DomainEnum;
+import com.picooc.wifi.server.common.DomainEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

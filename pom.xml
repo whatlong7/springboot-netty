@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.picooc.wifi</groupId>
-    <artifactId>springboot-netty</artifactId>
+    <artifactId>wifi-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-netty</name>
     <description>springboot集成netty</description>

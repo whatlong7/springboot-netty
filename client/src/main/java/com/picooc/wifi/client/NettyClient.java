@@ -24,7 +24,7 @@ public class NettyClient {
                 .handler(new NettyClientInitializer());
 
         try {
-            ChannelFuture future = bootstrap.connect("127.0.0.1", 8090).sync();
+            ChannelFuture future = bootstrap.connect("127.0.0.1", 999).sync();
             log.info("客户端成功....");
             //发送消息
             int i = 10;

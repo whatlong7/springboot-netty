@@ -1,8 +1,7 @@
-package com.picooc.wifiservice.backend.type;
+package com.picooc.wifi.server.type;
 
-import com.picooc.wifiservice.backend.ScaleDomain;
-import com.picooc.wifiservice.backend.Utils;
-import org.apache.commons.lang.StringUtils;
+import com.picooc.wifi.server.backend.ScaleDomain;
+import com.picooc.wifi.server.backend.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,7 +45,7 @@ public class SyncUTCType extends BaseType {
 
     private boolean isPresetDomain() {
         final String content = this.getContent();
-        if (StringUtils.isEmpty(content)) {
+        if (content == null || content.length() == 0) {
             return false;
         }
         String macAddress = Utils.hexStringToMacAddress(content.substring(0, 12));

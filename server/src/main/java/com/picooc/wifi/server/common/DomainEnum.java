@@ -1,4 +1,4 @@
-package com.picooc.wifiservice.common;
+package com.picooc.wifi.server.common;
 
 import java.util.HashMap;
 

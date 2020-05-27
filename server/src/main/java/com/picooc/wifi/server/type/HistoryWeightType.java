@@ -1,8 +1,7 @@
-package com.picooc.wifiservice.backend.type;
+package com.picooc.wifi.server.type;
 
-import com.picooc.wifiservice.backend.Record;
-import com.picooc.wifiservice.backend.Utils;
-import com.picooc.wifiservice.backend.Utils;
+import com.picooc.wifi.server.backend.Record;
+import com.picooc.wifi.server.backend.Utils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

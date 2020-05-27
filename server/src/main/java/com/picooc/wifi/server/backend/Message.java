@@ -1,6 +1,7 @@
 package com.picooc.wifi.server.backend;
 
-import com.picooc.wifiservice.backend.type.*;
+//import com.picooc.wifi.backend.type.*;
+import com.picooc.wifi.server.type.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -133,11 +134,11 @@ public class Message {
 
             i++;
         }
-        return com.picooc.wifiservice.backend.Utils.byteArrayToHexString(byteArray);
+        return com.picooc.wifi.server.backend.Utils.byteArrayToHexString(byteArray);
     }
 
     public boolean isChecksumValid(String hexString, String checksum) {
-        if (com.picooc.wifiservice.backend.Utils.calculateChecksum(hexString).equals(checksum)) {
+        if (com.picooc.wifi.server.backend.Utils.calculateChecksum(hexString).equals(checksum)) {
             return true;
         }
         return false;

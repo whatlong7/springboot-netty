@@ -1,4 +1,4 @@
-package com.picooc.wifi.server.socket;
+package com.picooc.wifi.server;
 
 import com.picooc.wifi.server.backend.Message;
 import io.netty.channel.ChannelHandlerContext;
