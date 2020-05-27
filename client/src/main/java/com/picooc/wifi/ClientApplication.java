@@ -1,6 +1,6 @@
-package com.gj;
+package com.picooc.wifi;
 
-import com.gj.client.NettyClient;
+import com.picooc.wifi.client.NettyClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

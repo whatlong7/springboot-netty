@@ -1,4 +1,4 @@
-package com.gj.client;
+package com.picooc.wifi.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -27,7 +27,13 @@ public class NettyClient {
             ChannelFuture future = bootstrap.connect("127.0.0.1", 8090).sync();
             log.info("客户端成功....");
             //发送消息
-            future.channel().writeAndFlush("你好啊");
+            int i = 10;
+            while (i > 0){
+                i --;
+                future.channel().writeAndFlush("你好啊" + i);
+                Thread.sleep(2000);
+            }
+
             // 等待连接被关闭
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {

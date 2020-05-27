@@ -1,4 +1,4 @@
-package com.gj.client;
+package com.picooc.wifi.client;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
